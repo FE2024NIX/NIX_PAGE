@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PetSectionComponent } from './components/pet-section/pet-section.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,PetSectionComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
