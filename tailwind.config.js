@@ -20,7 +20,7 @@ module.exports = {
       },
 
       screens: {
-        xs: '480px', //Breakpoint para pantalla ultra pequeña (Responsive)
+        xs: '200px', //Breakpoint para pantalla ultra pequeña (Responsive)
       },
     },
   },

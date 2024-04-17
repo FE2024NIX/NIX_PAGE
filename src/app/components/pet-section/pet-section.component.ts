@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './pet-section.component.html',
-  styleUrl: './pet-section.component.css'
+  styleUrl: './pet-section.component.css',
 })
 export class PetSectionComponent {
-
+  isHovered: boolean = false;
 }
