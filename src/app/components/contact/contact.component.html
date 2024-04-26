@@ -26,29 +26,280 @@
         class="bg-purple-light text-white font-roboto font-bold text-2xl p-1 2xl:mr-[183px] xl:mr-[183px]lg:mr-[183px] md:mr-[183px] sm:mr-[183px] xs: mr-0">
         Envíanos un Mensaje
       </p>
-      <form
-        class="flex flex-col border-solid border-2 border-gray-input rounded-2xl py-5 px-6 space-y-2 shadow-lg 2xl:w-[420px] xl:w-[420px] lg:w-[420px] md:w-[420px] sm:w-[420px] xs:w-[330px]">
-        <input
-          type="text"
-          placeholder="Nombre"
-          class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
-        <input
-          type="email"
-          placeholder="Email"
-          class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic invalid:border-pink-500 invalid:ring-pink-600" />
-        <input
-          type="text"
-          placeholder="Teléfono"
-          class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
-        <textarea
-          name=""
-          id=""
-          cols="35"
-          rows="4"
-          class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic"
-          placeholder="Escribir mensaje..."></textarea>
-        <button class="btn-contact">Enviar</button>
-      </form>
+
+      <div [formGroup]="form">
+        <form
+          class="flex flex-col border-solid border-2 border-gray-input rounded-2xl py-5 px-6 space-y-2 shadow-lg 2xl:w-[420px] xl:w-[420px] lg:w-[420px] md:w-[420px] sm:w-[420px] xs:w-[330px]"
+          action="javascript:void(0)"
+          (submit)="sendData()"
+          method="POST">
+          <input
+            formControlName="from_name"
+            name="name"
+            type="text"
+            placeholder="Nombre"
+            class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
+          <input
+            formControlName="from_email"
+            name="email"
+            type="email"
+            placeholder="Email"
+            class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic invalid:border-pink-500 invalid:ring-pink-600" />
+          <input
+            formControlName="from_phone_num"
+            name="phone_num"
+            type="text"
+            placeholder="Teléfono"
+            class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
+          <textarea
+            formControlName="message"
+            name="message"
+            id=""
+            cols="35"
+            rows="4"
+            class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic"
+            placeholder="Escribir mensaje..."></textarea>
+          <div>
+            <button type="submit" class="btn-contact">
+              @if (loading) {
+                <div class="flex flex-row">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                    width="26"
+                    height="26"
+                    style="
+                      shape-rendering: auto;
+                      display: block;
+                      background: transparent;
+                    "
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <g transform="translate(80,50)">
+                        <g transform="rotate(0)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="1">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.875s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.875s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g
+                        transform="translate(71.21320343559643,71.21320343559643)">
+                        <g transform="rotate(45)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.875">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.75s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.75s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g transform="translate(50,80)">
+                        <g transform="rotate(90)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.75">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.625s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.625s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g
+                        transform="translate(28.786796564403577,71.21320343559643)">
+                        <g transform="rotate(135)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.625">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.5s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.5s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g transform="translate(20,50.00000000000001)">
+                        <g transform="rotate(180)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.5">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.375s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.375s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g
+                        transform="translate(28.78679656440357,28.786796564403577)">
+                        <g transform="rotate(225)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.375">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.25s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.25s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g transform="translate(49.99999999999999,20)">
+                        <g transform="rotate(270)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.25">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="-0.125s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="-0.125s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g
+                        transform="translate(71.21320343559643,28.78679656440357)">
+                        <g transform="rotate(315)">
+                          <circle
+                            cx="0"
+                            cy="0"
+                            r="6"
+                            fill="#ffffff"
+                            fill-opacity="0.125">
+                            <animateTransform
+                              attributeName="transform"
+                              type="scale"
+                              begin="0s"
+                              values="1.5 1.5;1 1"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"></animateTransform>
+                            <animate
+                              attributeName="fill-opacity"
+                              keyTimes="0;1"
+                              dur="1s"
+                              repeatCount="indefinite"
+                              values="1;0"
+                              begin="0s"></animate>
+                          </circle>
+                        </g>
+                      </g>
+                      <g></g>
+                    </g>
+                  </svg>
+                  <p>Enviando ...</p>
+                </div>
+              } @else {
+                Enviar
+              }
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
