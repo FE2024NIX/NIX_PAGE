@@ -35,30 +35,96 @@
           method="POST">
           <input
             formControlName="from_name"
+            [ngClass]="{
+              'invalid-input':
+                form.get('from_name')?.invalid && form.get('from_name')?.touched
+            }"
             name="name"
             type="text"
             placeholder="Nombre"
             class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
+          <div
+            *ngIf="
+              form.get('from_name')?.invalid && form.get('from_name')?.touched
+            "
+            class="error-message">
+            El nombre es requerido
+          </div>
           <input
             formControlName="from_email"
+            [ngClass]="{
+              'invalid-input':
+                form.get('from_email')?.invalid &&
+                form.get('from_email')?.touched
+            }"
             name="email"
             type="email"
             placeholder="Email"
-            class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic invalid:border-pink-500 invalid:ring-pink-600" />
+            class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
+          <div
+            *ngIf="
+              form.get('from_email')?.invalid &&
+              form.get('from_email')?.touched &&
+              !form.get('from_email')?.errors?.['email'] &&
+              form.get('from_email')?.errors?.['required']
+            "
+            class="error-message">
+            El email es requerido
+          </div>
+
+          <div
+            *ngIf="
+              form.get('from_email')?.errors?.['email'] &&
+              form.get('from_email')?.touched
+            "
+            class="error-message">
+            Ingrese un correo electrónico válido.
+          </div>
+
           <input
             formControlName="from_phone_num"
+            [ngClass]="{
+              'invalid-input':
+                form.get('from_phone_num')?.invalid &&
+                form.get('from_phone_num')?.touched
+            }"
             name="phone_num"
             type="text"
             placeholder="Teléfono"
             class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic" />
+          <div
+            *ngIf="form.get('from_phone_num')?.errors?.['containsLetters']"
+            class="error-message">
+            Ingrese solo números en el campo de teléfono.
+          </div>
+
           <textarea
             formControlName="message"
+            [ngClass]="{
+              'invalid-input':
+                form.get('message')?.invalid && form.get('message')?.touched
+            }"
             name="message"
             id=""
             cols="35"
             rows="4"
             class="border-solid border-2 border-gray-input focus:border-purple-light transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-200 rounded-md px-2 py-1 placeholder:italic"
             placeholder="Escribir mensaje..."></textarea>
+          <div
+            *ngIf="form.get('message')?.invalid && form.get('message')?.touched"
+            class="error-message">
+            El mensaje es requerido
+          </div>
+
+          <div
+            *ngIf="
+              formSubmitted &&
+              form.invalid &&
+              form.errors?.['atLeastOneFieldRequired']
+            "
+            class="error-message">
+            Por favor, rellenar el formulario.
+          </div>
           <div>
             <button type="submit" class="btn-contact">
               @if (loading) {
