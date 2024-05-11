@@ -17,10 +17,13 @@ module.exports = {
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'], //Descripción en cada sección
+        zen: ['Zen Dots', 'sans-serif'], //Títulos
+        unbounded: ['Unbounded', 'sans-serif'], //Títulos
       },
 
       screens: {
-        xs: '200px', //Breakpoint para pantalla ultra pequeña (Responsive)
+        xs: '480px', //Breakpoint para pantalla ultra pequeña (Responsive)
+        mb: '320px',
       },
     },
   },

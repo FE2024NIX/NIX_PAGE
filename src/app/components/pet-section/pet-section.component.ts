@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
           opacity: 0,
         })
       ),
-      transition('previous <=> next', animate('0.7s ease-in')),
+      transition('previous <=> next', animate('0.6s ease-in')),
     ]),
   ],
 })

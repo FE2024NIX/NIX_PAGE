@@ -1,7 +1,7 @@
 <section
   class="w-full h-screen flex items-center justify-center flex-col mt-20">
   <article class="flex items-center text-center flex-col space-y-8 pb-5">
-    <p class="font-azonix text-[42px]">
+    <p class="font-unbounded text-[37px]">
       ¿LISTO PARA
       <span
         class="text-orange relative after:absolute after:bg-orange after:w-full after:h-[5px] after:left-0 after:top-full after:mt-2"
@@ -9,17 +9,27 @@
       >
     </p>
     <p
-      class="font-roboto 2xl:px-[15%] xl:px-[20%] lg:px-[15%] md:px-[6%] sm:px-[%] xs:px-[3%] text-xl">
+      class="font-roboto 2xl:px-[15%] xl:px-[20%] lg:px-[15%] md:px-[6%] sm:px-[%] xs:px-[3%] mb:px-[6%] text-xl">
       Nuestro equipo estará encantado de responder lo antes posible y ayudarte
       en todo lo que necesites.¡Esperamos poder colaborar contigo pronto!"
     </p>
   </article>
   <div
     class="flex items-center justify-center 2xl:space-x-4 xl:space-x-4 lg:space-x-4 md:space-x-4 sm:space-x-0 xs:space-x-0">
-    <img
-      src="../../../assets/images/pet-front.png"
-      alt="mascota-de-la-empresa"
-      class="2xl:w-[22%] xl:w-[22%] lg:w-[22%] md:w-[22%] sm:w-[0%] xs:w-[0%] mt-5" />
+    <div
+      class="relative 2xl:w-[300px] 2xl:h-[380px] xl:w-[300px] xl:h-[380px] lg:w-[300px] lg:h-[380px] sm:w-0 x:w-0">
+      <img
+        src="../../../assets/images/nixVFrontal.png"
+        alt="mascota-de-la-empresa"
+        class="absolute 2xl:w-[90%] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-0 xs:w-0 mt-[45px]" />
+
+      <img
+        [@imageState]="isHovered ? 'previous' : 'next'"
+        src="../../../assets/images/nixVFrontal.2.png"
+        alt="mascota-de-la-empresa"
+        class="absolute 2xl:w-[90%] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-0 xs:w-0 mt-[45px]" />
+    </div>
+
     <div
       class="space-y-4 xs: flex xs: flex-col xs: items-center xs:text-center">
       <p
@@ -29,7 +39,7 @@
 
       <div [formGroup]="form">
         <form
-          class="flex flex-col border-solid border-2 border-gray-input rounded-2xl py-5 px-6 space-y-2 shadow-lg 2xl:w-[420px] xl:w-[420px] lg:w-[420px] md:w-[420px] sm:w-[420px] xs:w-[330px]"
+          class="flex flex-col border-solid border-2 border-gray-input rounded-2xl py-5 px-6 space-y-2 shadow-lg 2xl:w-[420px] xl:w-[420px] lg:w-[420px] md:w-[420px] sm:w-[420px] xs:w-[330px] 2xl:mx-0 xl:mx-0 lg:mx-0 md:mx-0 sm:mx-0 mb:mx-[6%]"
           action="javascript:void(0)"
           (submit)="sendData()"
           method="POST">
@@ -95,7 +105,7 @@
           <div
             *ngIf="form.get('from_phone_num')?.errors?.['containsLetters']"
             class="error-message">
-            Ingrese solo números en el campo de teléfono.
+            Ingrese solo números en el campo teléfono.
           </div>
 
           <textarea
@@ -115,18 +125,21 @@
             class="error-message">
             El mensaje es requerido
           </div>
-
           <div
             *ngIf="
               formSubmitted &&
-              form.invalid &&
-              form.errors?.['atLeastOneFieldRequired']
+              (form.invalid || form.errors?.['atLeastOneFieldRequired'])
             "
             class="error-message">
             Por favor, rellenar el formulario.
           </div>
-          <div>
-            <button type="submit" class="btn-contact">
+
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="btn-contact"
+              (mouseenter)="isHovered = true"
+              (mouseleave)="isHovered = false">
               @if (loading) {
                 <div class="flex flex-row">
                   <svg

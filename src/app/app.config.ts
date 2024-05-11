@@ -5,7 +5,6 @@ import {
 } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-
 import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
@@ -14,8 +13,8 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([BrowserAnimationsModule]),
     provideAnimations(),
     provideToastr({
-        preventDuplicates: false,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
     }),
   ],
 };
-

@@ -1,6 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import {
   FormBuilder,
   FormGroup,
   ReactiveFormsModule,
@@ -9,14 +16,34 @@ import {
 } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
+  animations: [
+    trigger('imageState', [
+      state(
+        'previous',
+        style({
+          opacity: 1,
+        })
+      ),
+      state(
+        'next',
+        style({
+          opacity: 0,
+        })
+      ),
+      transition('previous <=> next', animate('0.4s ease-in')),
+    ]),
+  ],
 })
 export class ContactComponent {
+  isHovered: boolean;
+
   loading: boolean;
   formSubmitted: boolean;
 
@@ -34,6 +61,7 @@ export class ContactComponent {
   ) {
     this.loading = false;
     this.formSubmitted = false;
+    this.isHovered = false;
 
     this.form = this.fb.group(
       {
@@ -75,23 +103,17 @@ export class ContactComponent {
         message: this.form.value.message,
       });
 
-      // Alerta al enviar el mensaje con éxito
-      this.toastr.success('Tu mensaje ha sido enviado!', 'Notificación', {
-        closeButton: true,
-        newestOnTop: false,
-        progressBar: false,
-        positionClass: 'toast-top-center',
-        timeOut: 5000,
-        extendedTimeOut: 1000,
+      this.toastr.success('Tu mensaje ha sido enviado!', 'Mensaje de éxito', {
+        timeOut: 3000,
       });
 
       this.form.reset();
     } catch (error) {
       this.toastr.error(
-        'Se produjo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.',
-        'Notificación',
+        'Parece que estamos presentado problemas con nuestro servicio. \n Espere unos minutos e inténtelo nuevamente.',
+        'Mensaje de error',
         {
-          positionClass: 'toast-top-center',
+          timeOut: 3000,
         }
       );
     } finally {

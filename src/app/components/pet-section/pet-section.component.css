@@ -1,15 +1,21 @@
 .purple-fuchsia {
-    background: linear-gradient(to left, #ff8a00, #8f00ff);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: color 0.7s;
+  background: linear-gradient(to left, #ff8a00, #8f00ff);
+  background-clip: border-box;
+  font-weight: 400;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: color 0.7s;
 
 
 }
 
 .default-color {
-    color: #ff8a00;
-    transition-duration: color 0.7s;
+  color: #ff8a00;
+  transition-duration: color 0.7s;
 
+}
+
+.elipse {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.018) 100%);
+  backdrop-filter: blur(15px);
 }
