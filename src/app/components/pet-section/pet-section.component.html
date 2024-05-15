@@ -1,1 +1,38 @@
-<p>pet-section works!</p>
+<section class="flex items-center justify-center w-full h-screen">
+  <article
+    class="pet-rectangle w-[80%] h-[70%] -skew-x-6 -skew-y-[4deg] bg-purple flex flex-col items-center justify-center sm:pt-[90px] 2xl:mt-[0] xl:mt-[0] lg:mt-[0] md:mt-[0] sm:mt-[20%] xs:mt-[20%]">
+    <div
+      class="skew-x-6 skew-y-[4deg] 2xl:pr-[360px] 2xl:pl-[80px] xl:pr-[360px] xl:pl-[80px] lg:pr-[360px] lg:pl-[80px] md:pr-[310px] md:pl-[40px] xs:justify-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-center xs:text-center 2xl:pt-[0px] xl:pt-[0px] lg:pt-[0px] md:pt-[0px] sm:pt-[15%] xs:pt-[25%]">
+      <p
+        class="text-white font-roboto 2xl:text-3xl xl:text-3xl lg:text-3xl md: text-3xl sm:text-2xl xs:text-2xl">
+        <span
+          [ngClass]="{
+            'default-color': !isHovered,
+            'purple-fuchsia': isHovered
+          }">
+          ¡Hola! Soy <span class="font-extrabold font-roboto">Nix</span>, la
+          mascota de Fénix Triad,
+        </span>
+        represento la pasión por la innovación y el renacimiento en el mundo
+        tecnológico.
+      </p>
+      <button
+        class="btn-contact my-4"
+        (mouseenter)="isHovered = true"
+        (mouseleave)="isHovered = false">
+        Escríbenos
+      </button>
+    </div>
+  </article>
+
+ <!-- <img
+    src="../../../assets/images/pet.png"
+    alt="mascota-de-la-empresa"
+    class="absolute 2xl:w-[635px] xl:w-[635px] lg:w-[635px] md:w-[63%] sm:w-[54%] xs:w-[54%] xl:right-[10px] xl:-top-[030px] lg:right-[13px] lg:-top-[30px] md:right-[9px] md:-top-[5%] sm:right-[21%] sm:-top-[9%] xs:right-[21%] xs:-top-[4%]" />
+-->  
+  <img
+    [@imageState]="isHovered ? 'previous' : 'next'"
+    src="../../../assets/images/pet-flame.png"
+    alt="mascota-de-la-empresa"
+    class="absolute 2xl:w-[635px] xl:w-[635px] lg:w-[635px] md:w-[63%] sm:w-[54%] xs:w-[54%] xl:right-[14px] xl:-top-[30px] lg:right-[13px] lg:-top-[30px] md:right-[9px] md:-top-[5%] sm:right-[21%] sm:-top-[9%] xs:right-[21%] xs:-top-[4%]" />
+</section>

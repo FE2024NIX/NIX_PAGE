@@ -1,0 +1,15 @@
+.purple-fuchsia {
+    background: linear-gradient(to left, #ff8a00, #8f00ff);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: color 0.7s;
+
+
+}
+
+.default-color {
+    color: #ff8a00;
+    transition-duration: color 0.7s;
+
+}
