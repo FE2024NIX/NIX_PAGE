@@ -38,3 +38,38 @@ html {
 
 }
 
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
+
+  .vision {
+    background: url('/assets/images/vision.jpg') no-repeat center center;
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 700px;
+    height: 500px;
+  }
+
+  .mision {
+    background: url('/assets/images/mision.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: #896943 ;
+    background-blend-mode: multiply;
+    width: 700px;
+    height: 500px;
+  }
+  

@@ -1,0 +1,7 @@
+.texto_padding {
+    padding: 1vw; /* 1% del ancho de la ventana gráfica */
+}
+
+.justificado {
+    text-align: justify;
+}

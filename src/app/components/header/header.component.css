@@ -1,0 +1,334 @@
+#fondo{
+
+
+    background: linear-gradient(rgba(44, 14, 62, 0.62),rgba(44, 14, 62, 0.62)),
+    url('/assets/images/hand_keyboard_bw_143632_5760x3840.jpg');
+ 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1.2; 
+ }
+ 
+ 
+ #nvg a{
+     position: relative;
+     text-decoration: none;
+ 
+     font-size: 16px;
+     letter-spacing: 0.5px;
+     padding: 0 10px;
+ }
+ 
+ #letra{
+ 
+ 
+     stop-colors:  rgba(88, 0, 201, 1),rgba(252, 0, 211, 1), rgba(255, 138, 0, 1);
+  
+ 
+  }
+  
+  .azulLetra{
+ 
+     stop-color: rgba(88, 0, 201, 1);
+  }
+ 
+ 
+  .rosaLetra{
+ 
+     stop-color: rgba(252, 0, 211, 1)
+  }
+ 
+  .rosaTomate{
+ 
+     stop-color:  rgba(255, 138, 0, 1)
+  }
+ 
+ 
+ #nvg a:after{
+     content: "";
+     position:absolute;
+     background-color:chocolate;
+     height: 3px;
+     width: 0;
+     left:0;
+     bottom: -10px;
+     transition: 0.3s ;
+ }
+ 
+ #nvg a:hover:after{
+ width: 100%;
+ 
+ }
+ 
+ 
+ .contenedor {
+     display: flex;
+     flex-direction: column;
+     height: 200px; /* Altura del contenedor (puedes ajustarla según sea necesario) */
+     justify-content: flex-end; /* Esto alinea los elementos en la parte inferior */
+   }
+   
+   .linea-horizontal {
+     width: 100%;
+     border-top: 8px solid black;
+     
+   }
+ 
+ 
+ #poppins {
+     animation: colorFill 1.5s ease forwards 4.0s;
+     -webkit-animation: colorFill 1.5s ease forwards 4.0s;
+ }
+ 
+ #poppins path:nth-child(1) {
+     stroke-dasharray: 449px;
+     stroke-dashoffset: 449px;
+     animation: animateText 2s ease forwards;
+     -webkit-animation: animateText 2s ease forwards;
+ }
+ 
+ #poppins path:nth-child(2) {
+     stroke-dasharray: 565;
+     stroke-dashoffset: 565px;
+     animation: animateText 2s ease forwards 1s;
+     -webkit-animation: animateText 2s ease forwards 1s;
+ }
+ 
+ #poppins path:nth-child(3) {
+     stroke-dasharray: 449px;
+     stroke-dashoffset: 449px;
+     animation: animateText 2s ease forwards 1.5s;
+     -webkit-animation: animateText 2s ease forwards 1.5s;
+ }
+ 
+ #poppins path:nth-child(4) {
+     stroke-dasharray: 449px;
+     stroke-dashoffset: 449px;
+     animation: animateText 2s ease forwards 2.2s;
+     -webkit-animation: animateText 2s ease forwards 2.2s;
+ }
+ 
+ #poppins path:nth-child(5) {
+     stroke-dasharray: 227px;
+     stroke-dashoffset: 227px;
+     animation: animateText 2s ease forwards 2.7s;
+     -webkit-animation: animateText 2s ease forwards 2.7s;
+ }
+ 
+ #poppins path:nth-child(6) {
+     stroke-dasharray: 605px;
+     stroke-dashoffset: 605px;
+     animation: animateText 2s ease forwards 3.4s;
+     -webkit-animation: animateText 2s ease forwards 3.4s;
+ }
+ 
+ #poppins path:nth-child(7) {
+     stroke-dasharray: 494px;
+     stroke-dashoffset: 494px;
+     animation: animateText 2s ease forwards 4s;
+     -webkit-animation: animateText 2s ease forwards 4s;
+ }
+ 
+ @keyframes animateText {
+     to {
+         stroke-dashoffset: 0;
+     }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ #triad {
+     animation: colorFil 8s ease forwards 5.0s;
+     -webkit-animation: colorFil 8s ease forwards 5.0s;
+ }
+ 
+ 
+ #triad path:nth-child(1) {
+     stroke-dasharray: 565;
+     stroke-dashoffset: 565px;
+     animation: textTriad 2s ease forwards 1s;
+     -webkit-animation: textTriad 2s ease forwards 1s;
+ }
+ 
+ #triad path:nth-child(2) {
+     stroke-dasharray: 565;
+     stroke-dashoffset: 565px;
+     animation: textTriad 2s ease forwards 1s;
+     -webkit-animation: textTriad 2s ease forwards 1s;
+ }
+ 
+ #triad path:nth-child(3) {
+     stroke-dasharray: 449px;
+     stroke-dashoffset: 449px;
+     animation: textTriad 2s ease forwards 1.5s;
+     -webkit-animation: textTriad 2s ease forwards 1.5s;
+ }
+ 
+ #triad path:nth-child(4) {
+     stroke-dasharray: 449px;
+     stroke-dashoffset: 449px;
+     animation: textTriad 2s ease forwards 2.2s;
+     -webkit-animation: textTriad 2s ease forwards 2.2s;
+ }
+ 
+ #triad path:nth-child(5) {
+     stroke-dasharray: 227px;
+     stroke-dashoffset: 227px;
+     animation: textTriad 2s ease forwards 2.7s;
+     -webkit-animation: textTriad 2s ease forwards 2.7s;
+ }
+ 
+ #triad path:nth-child(6) {
+     stroke-dasharray: 605px;
+     stroke-dashoffset: 605px;
+     animation: textTriad 2s ease forwards 3.4s;
+     -webkit-animation: textTriad 2s ease forwards 3.4s;
+ }
+ 
+ #triad path:nth-child(7) {
+     stroke-dasharray: 494px;
+     stroke-dashoffset: 494px;
+     animation: textTriad 2s ease forwards 4s;
+     -webkit-animation: textTriad 2s ease forwards 4s;
+ }
+ 
+ 
+ 
+ @keyframes TextTriad {
+     to {
+         stroke-dashoffset: 0;
+     }
+ }
+ 
+ @keyframes colorFil {
+     from {
+         fill: transparent;
+         text-decoration: none;
+     }
+     to {
+         fill: url(#letra);
+     }
+ }
+ 
+ 
+ 
+ 
+ 
+ #company_name {
+     position: absolute;
+     top: 20%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     -o-transform: translate(-50%, -50%);
+ }
+   
+   #company_name path:nth-child(1) {
+     stroke-dasharray: 451.98345947265625px;
+     stroke-dashoffset: 451.98345947265625px;
+     animation: name-intro 1.4s ease-in-out forwards, degraded-fill 0.5s linear forwards 0.4s;
+   
+   }
+   
+   #company_name path:nth-child(2) {
+     stroke-dasharray: 520.0836181640625px;
+     stroke-dashoffset: 520.0836181640625px;
+     animation: name-intro 1.4s ease-in-out forwards 0.3s, degraded-fill 0.5s linear forwards 0.8s;
+   }
+   
+   #company_name path:nth-child(3) {
+     stroke-dasharray: 623.011474609375;
+     stroke-dashoffset: 623.011474609375;
+     animation: name-intro 1.4s ease-in-out forwards 0.6s, degraded-fill 0.5s linear forwards 1.2s;
+   
+   }
+   
+   #company_name path:nth-child(4) {
+     stroke-dasharray: 341.67767333984375;
+     stroke-dashoffset: 341.67767333984375;
+     animation: name-intro 1.4s ease-in-out forwards 0.9s, degraded-fill 0.5s linear forwards 1.6s;
+   }
+   
+   #company_name path:nth-child(5) {
+     stroke-dasharray: 491.8897399902344;
+     stroke-dashoffset: 491.8897399902344;
+     animation: name-intro 1.4s ease-in-out forwards 1.2s, degraded-fill 0.5s linear forwards 2s;
+   }
+   
+   #company_name path:nth-child(6) {
+     stroke-dasharray: 636;
+     stroke-dashoffset: 636;
+     animation: name-intro 1.4s ease-in-out forwards 1.5s, degraded-fill 0.5s linear forwards 2.4s;
+   }
+   
+   #company_name path:nth-child(7) {
+     stroke-dasharray: 269.81060791015625;
+     stroke-dashoffset: 269.81060791015625;
+     animation: name-intro 1.4s ease-in-out forwards 1.8s, white-fill 0.5s linear forwards 2.8s;
+   }
+   
+   #company_name path:nth-child(8) {
+     stroke-dasharray: 396.4669189453125;
+     stroke-dashoffset: 396.4669189453125;
+     animation: name-intro 1.4s ease-in-out forwards 2.1s, white-fill 0.5s linear forwards 3.2s;
+   }
+   
+   #company_name path:nth-child(9) {
+     stroke-dasharray: 160.75;
+     stroke-dashoffset: 160.75;
+     animation: name-intro 1.4s ease-in-out forwards 2.4s, white-fill 0.5s linear forwards 3.6s;
+   }
+   
+   #company_name path:nth-child(10) {
+     stroke-dasharray: 271.06170654296875;
+     stroke-dashoffset: 271.06170654296875;
+     animation: name-intro 1.4s ease-in-out forwards 2.7s, white-fill 0.5s linear forwards 4s;
+   }
+   
+   #company_name path:nth-child(11) {
+     stroke-dasharray: 390.1154479980469;
+     stroke-dashoffset: 390.1154479980469;
+     animation: name-intro 1.4s ease-in-out forwards 3s, white-fill 0.5s linear forwards 4.4s;
+   }
+   
+   @keyframes name-intro {
+     to {
+       stroke-dashoffset: 0%;
+     }
+   
+   }
+   
+   @keyframes degraded-fill {
+   
+     from {
+       fill: transparent
+     }
+   
+     to {
+       fill: url(#paint0_linear_0_1)
+     }
+   
+   }
+   
+   @keyframes white-fill {
+   
+     from {
+       fill: transparent
+     }
+   
+     to {
+       fill: white
+     }
+   
+   }
+ 
+ 
+   .svg-container {
+     max-width: 100%;
+   }

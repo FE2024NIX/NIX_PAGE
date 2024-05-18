@@ -1,1 +1,44 @@
-<p>services works!</p>
+<div id="services" class="flex items-center text-center flex-col space-y-8 pb-5">
+  <p class="font-azonix text-[42px] ">
+    NUESTROS
+    <span class="text-orange relative after:absolute after:bg-orange after:w-full after:h-[5px] after:left-0 after:top-full after:mt-2"
+      >SERVICIOS</span>
+  </p>
+</div>
+<div class="relative  ">
+  <ngx-slick-carousel #slickModal="slick-carousel" 
+  [config]="slideConfig">
+    @for (slide of slides; track slide.img) {
+    <div ngxSlickItem>
+      <div class="relative h-[460px]">
+        <img src="{{ slide.img }}" alt="" class="object-cover w-full h-full" />
+        <div class="absolute inset-0 bg-gradient-to-b from-purple-opaque to-black opacity-10"></div>
+        <div class="absolute inset-0 bottom-[20px] text-white text-center py-[20px] flex justify-center items-center">
+        </div>
+      </div>
+    </div>
+    }
+  </ngx-slick-carousel>
+
+  <div class="absolute inset-y-[40%] ml-16">
+    <div class="relative elipse rounded-full w-[78px] h-[78px] flex items-center justify-center">
+      <div>
+        <svg  width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.8735 28.8531L38.0864 47.7647C38.1497 47.8145 38.2257 47.8455 38.3058 47.8541C38.3859 47.8627 38.4667 47.8484 38.5391 47.813C38.6114 47.7777 38.6724 47.7227 38.7148 47.6543C38.7573 47.5859 38.7797 47.5069 38.7793 47.4263V43.2745C38.7793 43.0113 38.6558 42.7589 38.4517 42.5977L19.1157 27.4996L38.4517 12.4014C38.6611 12.2403 38.7793 11.9879 38.7793 11.7247V7.57278C38.7793 7.21296 38.3657 7.01424 38.0864 7.23444L13.8735 26.1461C13.6677 26.3066 13.5013 26.5119 13.3868 26.7465C13.2722 26.981 13.2127 27.2386 13.2127 27.4996C13.2127 27.7606 13.2722 28.0181 13.3868 28.2527C13.5013 28.4872 13.6677 28.6926 13.8735 28.8531Z"
+            fill="white" />
+        </svg>
+      </div>
+    </div>    
+
+    <div class="relative elipse rounded-full w-[78px] h-[78px] flex items-center justify-center left-[1150px] bottom-[78px]">
+      <div>
+        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg ">
+          <path
+            d="M41.1265 26.1469L16.9136 7.23528C16.8503 7.18547 16.7743 7.15452 16.6942 7.14597C16.6141 7.13743 16.5333 7.15164 16.4609 7.18698C16.3886 7.22231 16.3276 7.27734 16.2852 7.34574C16.2427 7.41414 16.2203 7.49314 16.2207 7.57366V11.7255C16.2207 11.9887 16.3442 12.2411 16.5483 12.4023L35.8843 27.5004L16.5483 42.5986C16.3389 42.7597 16.2207 43.0121 16.2207 43.2753V47.4272C16.2207 47.787 16.6343 47.9858 16.9136 47.7656L41.1265 28.8539C41.3323 28.6934 41.4987 28.4881 41.6132 28.2535C41.7278 28.019 41.7873 27.7614 41.7873 27.5004C41.7873 27.2394 41.7278 26.9819 41.6132 26.7473C41.4987 26.5128 41.3323 26.3074 41.1265 26.1469Z"
+            fill="white" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
