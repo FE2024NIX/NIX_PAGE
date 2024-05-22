@@ -17,32 +17,22 @@ footer {
   text-align: center;
 }
 
-
-.footer-content {
+.social-icons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.footer-content p {
-  margin: 0;
-  padding: 0 10px;
-}
-
-.social-icons {
-display: flex;
-justify-content: center;
-padding: 5px;
+  padding: 5px;
 }
 
 .social-icons a {
-color: #fff; /* Cambia el color según tu diseño */
-margin: 0 10px;
-font-size: 24px; /* Ajusta el tamaño según necesites */
-transition: color 0.3s;
+  color: #fff;
+  /* Cambia el color según tu diseño */
+  margin: 0 10px;
+  font-size: 24px;
+  /* Ajusta el tamaño según necesites */
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-color: #550e98; /* Cambia el color al hacer hover */
+  color: #FF7A00;
+  /* Cambia el color al hacer hover */
 }

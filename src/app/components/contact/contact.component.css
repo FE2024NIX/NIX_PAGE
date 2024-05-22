@@ -1,3 +1,4 @@
+/* ESTILOS PARA FORMULARIO */
 .error-message {
     color: red;
     font-size: 14px;
@@ -7,4 +8,48 @@
 .invalid-input {
     border-color: red;
     border-width: 1px;
+}
+
+/* ESTILOS PARA LOGOTIPO */
+
+.cls-1 {
+    fill: none;
+}
+
+.cls-1,
+.cls-2 {
+    stroke-width: 0px;
+}
+
+.cls-3 {
+    clip-path: url(#clippath-1);
+}
+
+.cls-2 {
+    fill: url(#Degradado_sin_nombre_4);
+}
+
+.cls-4 {
+    clip-path: url(#clippath);
+}
+
+.cls-10 {
+    fill: none;
+}
+
+.cls-10,
+.cls-20 {
+    stroke-width: 0px;
+}
+
+.cls-3 {
+    clip-path: url(#clippath-6);
+}
+
+.cls-20 {
+    fill: url(#Degradado_sin_nombre_7);
+}
+
+.cls-4 {
+    clip-path: url(#clippath5);
 }

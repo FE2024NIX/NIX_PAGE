@@ -12,13 +12,15 @@ module.exports = {
         'purple-degraded': '#8f00ff', //Color morado para degradado de botón y texto
         'pink-degraded': '#fc00d3', //Color fucsia para degradado de botón y texto
         'orange-degraded': '#ff8a00', //Color maranja para degradado de botón y texto
-        'orange-opaque': '#4f2c04', //Filtro de imagen en la misión
+        'orange-opaque': '#794304', //Filtro de imagen en la misión
+        'gray-opaque': '#2B2A2C', //Filtro de imagen en la visión
         'gray-input': '#eaeaea', //Bordes de formulario y componentes
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'], //Descripción en cada sección
         zen: ['Zen Dots', 'sans-serif'], //Títulos
         unbounded: ['Unbounded', 'sans-serif'], //Títulos
+        orbitron: ['Orbitron', 'sans-serif'], //Títulos
       },
 
       screens: {

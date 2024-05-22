@@ -1,14 +1,15 @@
-<section class="relative flex items-center justify-center w-full h-screen">
+<!-- ANIMATED-BUTTON - Copyright - 2024 StealthWorm (thierry) # Copyright - 2024 rubyreapergaming -->
+<section
+  class="relative flex items-center justify-center w-full xs:h-screen sm:mt-24 mb:mt-2">
   <article
-    class="pet-rectangle 2xl:w-[80%] 2xl:h-[70%] xl:w-[80%] xl:h-[70%] lg:w-[80%] lg:h-[70%] md:w-[80%] md:h-[70%] sm:w-[80%] sm:h-[70%] xs:w-[80%] xs:h-[70%] mb:h-[60%] mb:w-[75%] -skew-x-6 -skew-y-[4deg] bg-purple flex flex-col items-center justify-center sm:pt-[90px] 2xl:mt-[0] xl:mt-[0] lg:mt-[0] md:mt-[0] sm:mt-[20%] xs:mt-[20%]">
+    class="pet-rectangle xs:w-[80%] xs:h-[70%] mb:h-[60%] mb:w-[75%] -skew-x-6 -skew-y-[4deg] bg-purple flex flex-col items-center justify-center sm:pt-[90px] md:mt-[0] mb:mt-[20%]">
     <div
-      class="skew-x-6 skew-y-[4deg] 2xl:pr-[360px] 2xl:pl-[80px] xl:pr-[360px] xl:pl-[80px] lg:pr-[360px] lg:pl-[80px] md:pr-[310px] md:pl-[40px] xs:justify-center mb:justify-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-center xs:text-center mb:text-center 2xl:pt-[0px] xl:pt-[0px] lg:pt-[0px] md:pt-[0px] sm:pt-[15%] xs:pt-[25%] mb:pt-[25%]">
-      <p
-        class="text-white font-roboto 2xl:text-3xl xl:text-3xl lg:text-3xl md: text-3xl sm:text-2xl xs:text-2xl mb:text-2xl">
+      class="skew-x-6 skew-y-[4deg] lg:pr-[360px] lg:pl-[80px] md:pr-[310px] md:pl-[40px] mb:justify-center mb:items-center md:text-left mb:text-center md:pt-[0px] sm:pt-[15%] mb:pt-[25%]">
+      <p class="text-white font-roboto lg:text-3xl mb:text-2xl">
         <span
           [ngClass]="{
             'default-color': !isHovered,
-            'purple-fuchsia': isHovered
+            'orange-yellow': isHovered
           }">
           ¡Hola! Soy <span class="font-extrabold font-roboto">Nix</span>, la
           mascota de Fénix Triad,
@@ -16,23 +17,38 @@
         represento la pasión por la innovación y el renacimiento en el mundo
         tecnológico.
       </p>
-      <button
-        class="btn-contact my-4"
-        (mouseenter)="isHovered = true"
-        (mouseleave)="isHovered = false">
-        <a href="#contact"> Escríbenos</a>
-      </button>
+
+      <div class="my-4 flex md:justify-start mb:justify-center">
+        <a href="#contacto">
+          <button
+            type="button"
+            class="btn"
+            (mouseenter)="isHovered = true"
+            (mouseleave)="isHovered = false">
+            <strong class="text-white"> Escríbenos </strong>
+
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+
+            <div id="glow">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </button>
+        </a>
+      </div>
     </div>
   </article>
 
   <img
     src="../../../assets/images/pet.png"
     alt="mascota-de-la-empresa"
-    class="absolute 2xl:w-[635px] xl:w-[620px] lg:w-[620px] md:w-[61%] sm:w-[54%] xs:w-[54%] mb:w-[100%] xl:right-[14px] xl:-top-[30px] lg:right-[13px] lg:-top-[30px] md:right-[9px] md:-top-[2%] sm:right-[21%] sm:-top-[9%] xs:right-[21%] xs:-top-[4%] mb:mx-auto mb:-top-[15%]" />
+    class="absolute lg:w-[620px] md:w-[550px] xs:w-[54%] mb:w-[100%] xl:right-[14px] xl:-top-[30px] lg:right-[13px] lg:-top-[30px] md:right-[9px] md:-top-[2%] sm:right-[21%] sm:-top-[9%] xs:right-[21%] xs:-top-[4%] mb:mx-auto mb:-top-[50%]" />
 
   <img
     [@imageState]="isHovered ? 'previous' : 'next'"
     src="../../../assets/images/pet-flame.png"
     alt="mascota-de-la-empresa"
-    class="absolute 2xl:w-[635px] xl:w-[620px] lg:w-[620px] md:w-[61%] sm:w-[54%] xs:w-[54%] mb:w-[100%] xl:right-[14px] xl:-top-[30px] lg:right-[13px] lg:-top-[30px] md:right-[9px] md:-top-[2%] sm:right-[21%] sm:-top-[9%] xs:right-[21%] xs:-top-[4%] mb:mx-auto mb:-top-[15%]" />
+    class="absolute lg:w-[620px] md:w-[550px] xs:w-[54%] mb:w-[100%] xl:right-[14px] lg:right-[13px] lg:-top-[30px] md:right-[9px] md:-top-[2%] sm:right-[21%] sm:-top-[9%] xs:right-[21%] xs:-top-[4%] mb:mx-auto mb:-top-[45%]" />
 </section>
