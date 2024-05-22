@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import 'ngx-toastr/toastr';
 
-0% {
-  box-shadow: 0 0 0 0px #25d3664d rgba(0, 0, 0, 0.2)
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 @tailwind base;
@@ -322,4 +318,3 @@ strong {
     transform: skewX(0deg);
   }
 }
-
