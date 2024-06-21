@@ -1,7 +1,7 @@
 <div
   id="servicios"
   class="flex items-center text-center flex-col space-y-8 mt-24 mb-16">
-  <p class="font-unbounded sm:text-[37px] mb:text-[27px]">
+  <p class="font-unbounded sm:text-[37px] mb:text-[27px] services_title">
     NUESTROS
     <span
       class="text-orange relative after:absolute after:bg-orange after:w-full after:h-[5px] after:left-0 after:top-full after:mt-2">
@@ -9,18 +9,21 @@
     </span>
   </p>
 </div>
-<ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+<ngx-slick-carousel
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+  class="services_slider">
   <div *ngFor="let slide of slides; index as i" ngxSlickItem>
     <div class="relative h-[460px]">
       <img src="{{ slide.img }}" alt="" class="object-cover w-full h-full" />
       <div
-        class="absolute inset-0 bg-gradient-to-b from-gray-opaque to-black opacity-80"></div>
+        class="absolute inset-0 bg-gradient-to-b from-purple-opaque to-black opacity-80"></div>
       <div
         class="absolute inset-0 flex items-center justify-center flex-col space-y-5 text-white">
         <h2 class="text-3xl font-bold font-unbounded text-center">
           <ng-container *ngIf="isObject(slide.title)">
             <span *ngIf="slide.title.main">{{ slide.title.main }}</span>
-            <span class="bg-orange pr-[8px]" *ngIf="slide.title.highlight">{{
+            <span class="bg-[#A851FF] pr-[8px]" *ngIf="slide.title.highlight">{{
               slide.title.highlight
             }}</span>
           </ng-container>

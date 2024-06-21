@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {
   animate,
   state,
@@ -7,6 +7,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+
 import {
   FormBuilder,
   FormGroup,
@@ -16,6 +17,10 @@ import {
 } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { ToastrService } from 'ngx-toastr';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-contact',
@@ -41,7 +46,7 @@ import { ToastrService } from 'ngx-toastr';
     ]),
   ],
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
   isHovered: boolean;
 
   loading: boolean;
@@ -141,5 +146,87 @@ export class ContactComponent {
       phoneNumber === '' || phoneNumber === null || /^\d+$/.test(phoneNumber);
 
     return containsOnlyNumbers ? null : { containsLetters: true };
+  }
+
+  ngAfterViewInit(): void {
+    const contactTitle = document.querySelector('.contact_title');
+    const contactDescription = document.querySelector('.contact_description');
+    const contactForm = document.querySelector('.contact_form');
+    const contactImg = document.querySelector('.contact_img');
+
+    // Configuración para animación de título
+    gsap.fromTo(
+      contactTitle,
+      {
+        opacity: 0,
+        x: 100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.1,
+        scrollTrigger: {
+          trigger: contactTitle,
+          start: 'top 80%',
+          end: 'bottom 80%',
+        },
+      }
+    );
+
+    // Configuración para animación de descripción
+
+    gsap.fromTo(
+      contactDescription,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: contactDescription,
+        },
+      }
+    );
+
+    // Configuración para animación de imagen
+
+    gsap.fromTo(
+      contactImg,
+      {
+        opacity: 0,
+        x: -100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: contactImg,
+        },
+      }
+    );
+
+    // Configuración para animación de formulario
+
+    gsap.fromTo(
+      contactForm,
+      {
+        opacity: 0,
+        x: 100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: contactForm,
+        },
+      }
+    );
   }
 }

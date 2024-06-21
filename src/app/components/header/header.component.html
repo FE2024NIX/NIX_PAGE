@@ -1,11 +1,11 @@
 <!-- ANIMATED-BUTTON - Copyright - 2024 StealthWorm (thierry) # Copyright - 2024 rubyreapergaming -->
 
-<div id="fondo" className="w-full rounded-lg h-auto">
-  <header id="fondo" className="w-screen rounded-lg h-screen">
+<div className="w-full rounded-lg h-auto">
+  <header id="fondo" className="w-screen rounded-lg h-screen header_bg">
     <nav x-data="{ open: false }">
       <div class="max-w-18xl px-4 sm:px-12 lg:px-28">
         <div class="relative flex items-center justify-between h-28">
-          <div class="flex-shrink-0 flex items-start right-30">
+          <div class="flex-shrink-0 flex items-start right-30 navbar_logo">
             <img
               class="block lg:hidden h-8 w-auto"
               src="assets/images/logo-fenix-triad.svg"
@@ -60,7 +60,7 @@
           <div
             class="flex-1 flex items-start justify-center sm:items-stretch sm:justify-self-auto">
             <div class="hidden sm:block sm:ml-12">
-              <div id="nvg" class="flex space-x-12 justify-center">
+              <div id="nvg" class="flex space-x-12 justify-center menu-items">
                 <a
                   href="#menu"
                   class="text-[#ff7a00] px-3 py-2 text-base font-medium hover:text-[#ff7a00] rounded-md"
@@ -130,9 +130,9 @@
     </nav>
 
     <div
-      class="relative py-36 flex flex-col items-start md:mx-28 mb:mx-12 flex-initial md:w-[36rem]">
+      class="relative py-36 flex flex-col items-start md:mx-28 mb:mx-12 flex-initial md:w-[36rem] section_header">
       <!-- Title -->
-      <div class="absolute top-16 svg-container">
+      <div class="absolute top-16 svg-container company_name">
         <svg
           id="company_name"
           width="100%"
@@ -217,7 +217,7 @@
       </div>
 
       <!-- Description -->
-      <div class="flex flex-row sm:mt-14 xs:mt-5 space-x-5">
+      <div class="flex flex-row sm:mt-14 xs:mt-5 space-x-5 description">
         <div class="bg-white md:h-14 sm:h-14 xs:h-21 w-[3px] mt-1"></div>
         <p class="text-[22px] text-gray-300 font-roboto">
           Transformamos tus ideas y mejoramos tus procesos para generar
@@ -228,7 +228,7 @@
       <!-- Button -->
       <div class="mt-8">
         <a href="#contacto">
-          <button type="button" class="btn">
+          <button type="button" class="btn contact-btn header_btn">
             <strong> Contáctanos </strong>
 
             <div id="container-stars">

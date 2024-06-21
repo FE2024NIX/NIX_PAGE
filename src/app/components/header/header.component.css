@@ -13,7 +13,7 @@
 }
 
 #fondo {
-  background: url('/assets/images/banner-fenix.png');
+  background: url('/assets/images/banner-fenix.jpg');
   object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,27 +29,6 @@
   letter-spacing: 0.5px;
   padding: 0 10px;
 }
-
-#letra {
-  stop-colors: rgba(88, 0, 201, 1), rgba(252, 0, 211, 1), rgb(255, , 0)
-}
-
-.azulLetra {
-
-  stop-color: rgba(88, 0, 201, 1);
-}
-
-
-.rosaLetra {
-
-  stop-color: rgba(252, 0, 211, 1)
-}
-
-.rosaTomate {
-
-  stop-color: #ff7a00
-}
-
 
 #nvg a:after {
   content: "";
@@ -83,83 +62,120 @@
 
 }
 
-/* #company_name {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-} */
+#hoja path {
+  stroke-dasharray: 751.5855102539062px;
+  stroke-dashoffset: 751.5855102539062px;
+  animation-name: name-intro 1.4s ease-in-out forwards;
+}
 
 #company_name path:nth-child(1) {
   stroke-dasharray: 451.98345947265625px;
   stroke-dashoffset: 451.98345947265625px;
-  animation: name-intro 1.4s ease-in-out forwards, degraded-fill 0.5s linear forwards 0.4s;
-
+  animation-name: name-intro, degraded-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 0s, 0.4s;
 }
 
 #company_name path:nth-child(2) {
   stroke-dasharray: 520.0836181640625px;
   stroke-dashoffset: 520.0836181640625px;
-  animation: name-intro 1.4s ease-in-out forwards 0.3s, degraded-fill 0.5s linear forwards 0.8s;
+  animation-name: name-intro, degraded-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 0.3s, 0.8s;
 }
 
 #company_name path:nth-child(3) {
-  stroke-dasharray: 623.011474609375;
-  stroke-dashoffset: 623.011474609375;
-  animation: name-intro 1.4s ease-in-out forwards 0.6s, degraded-fill 0.5s linear forwards 1.2s;
-
+  stroke-dasharray: 623.011474609375px;
+  stroke-dashoffset: 623.011474609375px;
+  animation-name: name-intro, degraded-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 0.6s, 1.2s;
 }
 
 #company_name path:nth-child(4) {
-  stroke-dasharray: 341.67767333984375;
-  stroke-dashoffset: 341.67767333984375;
-  animation: name-intro 1.4s ease-in-out forwards 0.9s, degraded-fill 0.5s linear forwards 1.6s;
+  stroke-dasharray: 341.67767333984375px;
+  stroke-dashoffset: 341.67767333984375px;
+  animation-name: name-intro, degraded-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 0.9s, 1.6s;
 }
 
 #company_name path:nth-child(5) {
-  stroke-dasharray: 491.8897399902344;
-  stroke-dashoffset: 491.8897399902344;
-  animation: name-intro 1.4s ease-in-out forwards 1.2s, degraded-fill 0.5s linear forwards 2s;
+  stroke-dasharray: 491.8897399902344px;
+  stroke-dashoffset: 491.8897399902344px;
+  animation-name: name-intro, degraded-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 1.2s, 2s;
 }
 
 #company_name path:nth-child(6) {
-  stroke-dasharray: 636;
-  stroke-dashoffset: 636;
-  animation: name-intro 1.4s ease-in-out forwards 1.5s, degraded-fill 0.5s linear forwards 2.4s;
+  stroke-dasharray: 636px;
+  stroke-dashoffset: 636px;
+  animation-name: name-intro, degraded-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 1.5s, 2.4s;
 }
 
 #company_name path:nth-child(7) {
-  stroke-dasharray: 269.81060791015625;
-  stroke-dashoffset: 269.81060791015625;
-  animation: name-intro 1.4s ease-in-out forwards 1.8s, white-fill 0.5s linear forwards 2.8s;
+  stroke-dasharray: 269.81060791015625px;
+  stroke-dashoffset: 269.81060791015625px;
+  animation-name: name-intro, white-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 1.8s, 2.8s;
 }
 
 #company_name path:nth-child(8) {
-  stroke-dasharray: 396.4669189453125;
-  stroke-dashoffset: 396.4669189453125;
-  animation: name-intro 1.4s ease-in-out forwards 2.1s, white-fill 0.5s linear forwards 3.2s;
+  stroke-dasharray: 396.4669189453125px;
+  stroke-dashoffset: 396.4669189453125px;
+  animation-name: name-intro, white-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 2.1s, 3.2s;
 }
 
 #company_name path:nth-child(9) {
-  stroke-dasharray: 160.75;
-  stroke-dashoffset: 160.75;
-  animation: name-intro 1.4s ease-in-out forwards 2.4s, white-fill 0.5s linear forwards 3.6s;
+  stroke-dasharray: 160.75px;
+  stroke-dashoffset: 160.75px;
+  animation-name: name-intro, white-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 2.4s, 3.6s;
 }
 
 #company_name path:nth-child(10) {
-  stroke-dasharray: 271.06170654296875;
-  stroke-dashoffset: 271.06170654296875;
-  animation: name-intro 1.4s ease-in-out forwards 2.7s, white-fill 0.5s linear forwards 4s;
+  stroke-dasharray: 271.06170654296875px;
+  stroke-dashoffset: 271.06170654296875px;
+  animation-name: name-intro, white-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 2.7s, 4s;
 }
 
 #company_name path:nth-child(11) {
-  stroke-dasharray: 390.1154479980469;
-  stroke-dashoffset: 390.1154479980469;
-  animation: name-intro 1.4s ease-in-out forwards 3s, white-fill 0.5s linear forwards 4.4s;
+  stroke-dasharray: 390.1154479980469px;
+  stroke-dashoffset: 390.1154479980469px;
+  animation-name: name-intro, white-fill;
+  animation-duration: 1.4s, 0.5s;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 3s, 4.4s;
 }
 
 @keyframes name-intro {
