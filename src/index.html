@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Fénix Triad</title>
+
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -27,7 +28,21 @@
       href="assets/images/logo-fenix-triad.svg" />
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body>
+  <body class="black-background">
+    <div class="loader-container">
+      <span class="loader"></span>
+    </div>
+
     <app-root></app-root>
+    <script>
+      // Script para ocultar el loading una vez que la aplicación esté lista
+      window.addEventListener('load', function () {
+        const loader = document.querySelector('.loader-container');
+        if (loader) {
+          loader.style.display = 'none';
+        }
+        document.body.classList.remove('black-background');
+      });
+    </script>
   </body>
 </html>

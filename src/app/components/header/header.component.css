@@ -217,7 +217,7 @@
 @media screen and (max-width: 640px) {
 
   #fondo {
-    background: url('/assets/images/fenix-mobile.png');
+    background: url('/assets/images/fenix-mobile.jpg');
     object-fit: contain;
     background-size: cover;
     background-repeat: no-repeat;
