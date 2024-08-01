@@ -14,8 +14,8 @@ module.exports = {
         'orange-degraded': '#ff8a00', //Color maranja para degradado de botón y texto
         'orange-opaque': '#794304', //Filtro de imagen en la misión
         'gray-opaque': '#2B2A2C', //Filtro de imagen en la visión
-        'gray-input': '#eaeaea', //Bordes de formulario y componentes
       },
+        'gray-input': '#eaeaea', //Bordes de formulario y componentes
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'], //Descripción en cada sección
         zen: ['Zen Dots', 'sans-serif'], //Títulos

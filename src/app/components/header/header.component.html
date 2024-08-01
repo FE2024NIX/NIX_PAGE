@@ -1,23 +1,25 @@
 <!-- ANIMATED-BUTTON - Copyright - 2024 StealthWorm (thierry) # Copyright - 2024 rubyreapergaming -->
 
-<div className="w-full rounded-lg h-auto">
+<div className="w-full rounded-lg h-auto" id="inicio">
   <header id="fondo" className="w-screen rounded-lg h-screen header_bg">
     <nav x-data="{ open: false }">
       <div class="max-w-18xl px-4 sm:px-12 lg:px-28">
         <div class="relative flex items-center justify-between h-28">
-          <div class="flex-shrink-0 flex items-start right-30 navbar_logo">
-            <img
-              class="block lg:hidden h-8 w-auto"
-              src="assets/images/logo-fenix-triad.svg"
-              alt="Workflow" />
+          <a href="../../../index.html">
+            <div class="flex-shrink-0 flex items-start right-30 navbar_logo">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="assets/images/logo-fenix-triad.svg"
+                alt="Workflow" />
 
-            <img
-              class="hidden lg:block h-8 w-auto"
-              src="assets/images/logo-fenix-triad.svg"
-              alt="Workflow" />
-          </div>
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="assets/images/logo-fenix-triad.svg"
+                alt="Workflow" />
+            </div>
+          </a>
 
-          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+          <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
             <!-- Mobile menu button-->
             <button
               x-on:click="open = ! open"
@@ -58,8 +60,8 @@
           </div>
 
           <div
-            class="flex-1 flex items-start justify-center sm:items-stretch sm:justify-self-auto">
-            <div class="hidden sm:block sm:ml-12">
+            class="flex-1 flex items-start justify-center md:items-stretch md:justify-self-auto">
+            <div class="hidden md:block md:ml-12">
               <div id="nvg" class="flex space-x-12 justify-center menu-items">
                 <a
                   href="#menu"
@@ -81,6 +83,12 @@
                 >
 
                 <a
+                  href="#planes"
+                  class="text-white hover:text-[#ff7a00] px-3 py-2 text-sm font-medium"
+                  >Planes</a
+                >
+
+                <a
                   href="#contacto"
                   class="text-white hover:text-[#ff7a00] px-3 py-2 text-sm font-medium"
                   >Contacto</a
@@ -93,7 +101,7 @@
 
       <!-- Mobile menu, show/hide based on menu state. -->
       <div
-        class="absolute sm:hidden z-10 top-20 w-full backdrop-blur-sm"
+        class="absolute md:hidden z-10 top-20 w-full backdrop-blur-sm"
         id="mobile-menu"
         id="mobile-menu">
         <div
@@ -118,6 +126,12 @@
             href="#servicios"
             class="text-white hover:bg-[#FF8A00] block px-3 py-2 rounded-md text-base font-medium"
             >Servicios</a
+          >
+
+          <a
+            href="#planes"
+            class="text-white hover:bg-[#FF8A00] block px-3 py-2 rounded-md text-base font-medium"
+            >Planes</a
           >
 
           <a

@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MissionVisionComponent } from './components/mission-vision/mision-vision.component';
 import { PetSectionComponent } from './components/pet-section/pet-section.component';
 import { ServicesComponent } from './components/services/services.component';
+import { PlansComponent } from './components/plans/plans.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { ServicesComponent } from './components/services/services.component';
     HeaderComponent,
     AboutComponent,
     MissionVisionComponent,
+    PlansComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
