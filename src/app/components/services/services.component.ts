@@ -26,7 +26,7 @@ interface Slide {
 export class ServicesComponent implements AfterViewInit {
   slides: Slide[] = [
     {
-      img: '../../../assets/images/servicios-desarrollo-software.png',
+      img: 'assets/images/servicios-desarrollo-software.png',
       title: {
         main: 'DESARROLLO DE',
         highlight: ' SOFTWARE',
@@ -34,7 +34,7 @@ export class ServicesComponent implements AfterViewInit {
       desc: 'El equipo de Fénix Triad está enfocado en realizar proyectos con base en desarrollo de software, dando soluciones eficientes e integrales, para la implementación de sistemas sofisticados, de esta manera se trabaja en conjunto para los objetivos empresariales con procesos con valor ético y con los mejores profesionales.',
     },
     {
-      img: '../../../assets/images/servicios-análisis-datos.png',
+      img: 'assets/images/servicios-análisis-datos.png',
       title: {
         main: 'ANÁLISIS DE',
         highlight: ' DATOS',
@@ -42,7 +42,7 @@ export class ServicesComponent implements AfterViewInit {
       desc: 'Brindamos servicios de analítica de datos orientados a la inteligencia de negocios, ayudamos a visualizar métricas que permiten identificar el estado actual del negocio brindando las herramientas necesarias para tomar decisiones en tu organización.',
     },
     {
-      img: '../../../assets/images/servicios-diseño-UI.png',
+      img: 'assets/images/servicios-diseño-UI.png',
       title: {
         main: 'DISEÑO',
         highlight: ' UI/UX',
@@ -50,7 +50,7 @@ export class ServicesComponent implements AfterViewInit {
       desc: 'Maximizamos la usabilidad y el atractivo visual de tu sitio web con nuestro diseño UI/UX en tu empresa, nos enfocamos en crear interfaces que no solo se vean bien, sino que sean amigables para el usuario final y además funcionen de manera práctica.',
     },
     {
-      img: '../../../assets/images/servicios-capacitaciones.png',
+      img: 'assets/images/servicios-capacitaciones.png',
       title: {
         main: 'CAPACITAC',
         highlight: 'IONES',

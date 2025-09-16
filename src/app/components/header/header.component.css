@@ -13,7 +13,7 @@
 }
 
 #fondo {
-  background: url('/assets/images/banner-fenix.jpg');
+  background: url('assets/images/banner-fenix.jpg');
   object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
