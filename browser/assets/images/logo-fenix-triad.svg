@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="LogoFenixTriad" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 160.5 120.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m80.5,0L0,120.5h132l14-21.5L94.5,22l-12.5,18.5,42,61.5H36.5L92.5,19,80.5,0Z"/>
+  <path class="cls-1" d="m148.5,102.5l12,18h-24l12-18Z"/>
+</svg>
